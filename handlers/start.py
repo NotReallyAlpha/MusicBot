@@ -19,7 +19,7 @@ Hey {message.from_user.mention()} !
 
 ┏━━━━━━━━━━━━━━┓
 ┣★
-┣★ ᴍᴀᴅᴇ ʙʏ: [THE END](t.me/BTS_CHAT_ZONE)
+┣★ ᴍᴀᴅᴇ ʙʏ: [THE END](t.me/THE_END_NETWORK)
 ┣★
 ┗━━━━━━━━━━━━━━┛
 
@@ -36,14 +36,14 @@ Hey {message.from_user.mention()} !
                         "✨ Owner ❤️", url=f"https://t.me/{me}"
                     ),
                     InlineKeyboardButton(
-                        "✨ Support 💜", url=f"https://t.me/{SUPPORT_GROUP}"
+                        "✨ Support 💜", url=f"https://t.me/THE_END_NETWORK"
                     )
                 ],[
                     InlineKeyboardButton(
                         "🔎 Inline 🔎", switch_inline_query_current_chat=""
                     ),
                     InlineKeyboardButton(
-                        "✨ DEv 💫", url="https://github.com/AnonymousR1025/FallenMusic"
+                        "✨ DEv 💫", url="t.me/Deveshi"
                     )]
             ]
        ),
