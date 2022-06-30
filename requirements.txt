@@ -19,3 +19,4 @@ psutil
 telegram
 python-telegram-bot==13.11
 yt-dlp 
+pillow
