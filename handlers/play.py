@@ -24,6 +24,8 @@ from pytgcalls.types.input_stream import InputAudioStream
 from pytgcalls.types.input_stream import InputStream
 from PIL import Image, ImageDraw, ImageFont
 
+HEHE = ["74D63AA4-688D-4B03-98EE-B035525FCBFB.png"]
+
 def changeImageSize(maxWidth, maxHeight, image):
     widthRatio = maxWidth / image.size[0]
     heightRatio = maxHeight / image.size[1]
@@ -41,7 +43,7 @@ async def generate_cover(thumbnail, title, userid, ctitle):
                 await f.write(await resp.read())
                 await f.close()
     image1 = Image.open(f"thumb{userid}.png")
-    images = choice(ZAID_IMGS)
+    images = HEHE[0]
     image2 = Image.open(images)
     image3 = changeImageSize(1280, 720, image1)
     image4 = changeImageSize(1280, 720, image2)
