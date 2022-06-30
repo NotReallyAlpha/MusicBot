@@ -53,7 +53,6 @@ async def play(_, message: Message):
     global que
     global useer
 
-    await message.delete()
 
     fallen = await message.reply("» Processing query...")
 
@@ -77,7 +76,7 @@ async def play(_, message: Message):
                     invitelink = await _.export_chat_invite_link(chid)
                 except:
                     await fallen.edit(
-                        "<b>» Admin rights required !</b>")
+                        "<b>» Admin rights required to export invite link for joining assistant 🤧!</b>")
                     return
 
                 try:
