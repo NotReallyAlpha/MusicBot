@@ -174,6 +174,8 @@ async def play(_, message: Message):
             durl = url
             durl = durl.replace("youtube", "youtubepp")
 
+            await generate_cover(thumbnail, title, message.from_user.id, message.chat.title)
+
             secmul, dur, dur_arr = 1, 0, duration.split(":")
             for i in range(len(dur_arr) - 1, -1, -1):
                 dur += int(dur_arr[i]) * secmul
@@ -212,6 +214,8 @@ async def play(_, message: Message):
             views = results[0]["views"]
             durl = url
             durl = durl.replace("youtube", "youtubepp")
+
+            await generate_cover(thumbnail, title, message.from_user.id, message.chat.title)
 
             secmul, dur, dur_arr = 1, 0, duration.split(":")
             for i in range(len(dur_arr) - 1, -1, -1):
@@ -260,8 +264,8 @@ async def play(_, message: Message):
                 stream_type=StreamType().local_stream,
             )
 
-        await message.reply_text(
-            text=f"**ㅤㅤㅤ» Now streaming «**\n📌 **Title​:** [{title[:65]}]({url})\n🕕 **Duration:** `{duration}` Minutes\n💕 **Query by:** {chumtiya}\n💔 **Streaming in:** `{message.chat.title}`\n🎥 **Stream Type:** End Official Tunes\n",
+        await message.reply_photo(
+            final, caption=f"**ㅤㅤㅤ» Now streaming «**\n📌 **Title​:** [{title[:65]}]({url})\n🕕 **Duration:** `{duration}` Minutes\n💕 **Query by:** {chumtiya}\n💔 **Streaming in:** `{message.chat.title}`\n🎥 **Stream Type:** End Official Tunes\n",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
